@@ -32,14 +32,20 @@ public class StatServiceImpl implements StatService {
         List<String> uris = params.getUris();
         LocalDateTime start = params.getStart();
         LocalDateTime end = params.getEnd();
+        if (start == null || end == null) {
+            throw new IllegalArgumentException("Должны быть указаны даты начала и окончания периода");
+        }
+        if (start.isAfter(end)) {
+            throw new IllegalArgumentException("Дата начала должна быть раньше даты окончания");
+        }
         if (params.getUnique()) {
-            if (uris.isEmpty()) {
+            if (uris == null || uris.isEmpty()) {
                 return repository.getAllStatsByDistinctIp(start, end);
             } else {
                 return repository.getAllStatsInUrisByDistinctIp(uris, start, end);
             }
         } else {
-            if (uris.isEmpty()) {
+            if (uris == null || uris.isEmpty()) {
                 return repository.getAllStats(start, end);
             } else {
                 return repository.getAllStatsInUris(uris, start, end);
