@@ -19,7 +19,7 @@ class EventDtoJsonTest {
 
     @Test
     @SneakyThrows
-    void EventDtoTest() {
+    void eventDtoTest() {
         EventDto eventDto = EventDto.builder()
                 .eventDate(LocalDateTime.now())
                 .createdOn(LocalDateTime.now().minusHours(1))

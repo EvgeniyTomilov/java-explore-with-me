@@ -19,7 +19,7 @@ class EventUpdateRequestDtoJsonTest {
 
     @Test
     @SneakyThrows
-    void EventUpdateRequestDtoTest() {
+    void eventUpdateRequestDtoTest() {
         EventUpdateRequestDto eventUpdateRequestDto = EventUpdateRequestDto.builder()
                 .eventDate(LocalDateTime.now())
                 .build();

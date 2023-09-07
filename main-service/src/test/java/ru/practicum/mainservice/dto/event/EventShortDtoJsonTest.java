@@ -19,7 +19,7 @@ class EventShortDtoJsonTest {
 
     @Test
     @SneakyThrows
-    void EventShortDtoTest() {
+    void eventShortDtoTest() {
         EventShortDto eventShortDto = EventShortDto.builder()
                 .eventDate(LocalDateTime.now())
                 .build();

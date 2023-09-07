@@ -19,7 +19,7 @@ class RequestDtoJsonTest {
 
     @Test
     @SneakyThrows
-    void RequestDtoTest() {
+    void requestDtoTest() {
         RequestDto requestDto = RequestDto.builder()
                 .created(LocalDateTime.now())
                 .build();
