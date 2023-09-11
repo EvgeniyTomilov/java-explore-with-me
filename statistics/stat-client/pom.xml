@@ -12,7 +12,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <name>stat-client</name>
-    <description>Client for statistics service in explore-with-me</description>
+    <description>Client for stat service in explore-with-me</description>
 
     <dependencies>
         <dependency>
